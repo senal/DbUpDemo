@@ -33,3 +33,4 @@ C:\workspace\rnd\DbUp\DbUpdater\obj\Debug\net5.0\ref\DbUpdater.dll
 C:\workspace\rnd\DbUp\DbUpdater\obj\Debug\net5.0\DbUpdater.pdb
 C:\workspace\rnd\DbUp\DbUpdater\obj\Debug\net5.0\DbUpdater.genruntimeconfig.cache
 C:\workspace\rnd\DbUp\DbUpdater\bin\Debug\net5.0\appsettings.json
+C:\workspace\rnd\DbUp\DbUpdater\obj\Debug\net5.0\DbUpdater.csprojAssemblyReference.cache

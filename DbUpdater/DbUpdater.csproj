@@ -5,12 +5,14 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Scripts\Release1.0.0\202102231000-CreateBuyerTable.sql" />
-    <None Remove="Scripts\Release1.0.0\202102231001-AddColumnTaskTable - Copy.sql" />
-    <None Remove="Scripts\Release1.0.0\202102241000-CreateTaskable.sql" />
+    <None Remove="Scripts\Release1.0.0\202102231001-AddColumnTaskTable .sql" />
+    <None Remove="Scripts\Release1.0.0\202102241000-CreateTaskTable.sql" />
+    <None Remove="Scripts\Release1.0.0\202103011000-CreateJobTable.sql" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Scripts\Release1.0.0\202102231001-AddColumnTaskTable - Copy.sql" />
-    <EmbeddedResource Include="Scripts\Release1.0.0\202102241000-CreateTaskable.sql" />
+    <EmbeddedResource Include="Scripts\Release1.0.0\202102231001-AddColumnTaskTable .sql" />
+    <EmbeddedResource Include="Scripts\Release1.0.0\202102241000-CreateTaskTable.sql" />
+    <EmbeddedResource Include="Scripts\Release1.0.1\202103011000-CreateJobTable.sql" />
     <EmbeddedResource Include="Scripts\Release1.0.0\202102231000-CreateBuyerTable.sql" />
   </ItemGroup>
   <ItemGroup>
@@ -23,8 +25,5 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\Release1.0.1\" />
   </ItemGroup>
 </Project>
