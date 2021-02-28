@@ -11,14 +11,26 @@ pool:
 
 steps:
 - task: DotNetCoreCLI@2
+  displayName: 'Building project'
   inputs:
     command: 'build'
     projects: |
       DbUpdater/DbUpdater.csproj
       Dbup.Web/Dbup.Web.csproj
-    arguments: '-o $(Build.ArtifactStagingDirectory)/Output --configuration Release'
-   
+
+- task: DotNetCoreCLI@2
+  displayName: 'Prepare publish artifacts'
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: |
+      DbUpdater/DbUpdater.csproj
+      Dbup.Web/Dbup.Web.csproj
+    arguments: '-o $(Build.ArtifactStagingDirectory)/Output'
+    zipAfterPublish: true
+
 - task: PublishBuildArtifacts@1
+  displayName: 'Publishing Build artifacts'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/Output'
     ArtifactName: 'drop'
