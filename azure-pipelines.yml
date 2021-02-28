@@ -27,3 +27,8 @@ steps:
     arguments: '-o $(Build.ArtifactStagingDirectory)/Output'  
     zipAfterPublish: true
     modifyOutputPath: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/Output'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
