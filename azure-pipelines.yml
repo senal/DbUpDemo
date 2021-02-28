@@ -16,9 +16,13 @@ steps:
     projects: |
       DbUpdater/DbUpdater.csproj
       Dbup.Web/Dbup.Web.csproj
-    arguments: '--output &(Build.BinariesDirectory)/publish_output --configuration Release'
-- task: PublishBuildArtifacts@1
+   
+- task: DotNetCoreCLI@2
   inputs:
-    PathtoPublish: '&(Build.BinariesDirectory)/publish_output'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    command: 'publish'
+    publishWebProjects: false
+    projects: |
+      DbUpdater/DbUpdater.csproj
+      Dbup.Web/Dbup.Web.csproj
+    zipAfterPublish: true
+    modifyOutputPath: true
