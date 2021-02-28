@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Scripts\Release1.0.0\202102231000-CreateBuyerTable.sql" />
+    <None Remove="Scripts\Release1.0.0\202102231001-AddColumnTaskTable - Copy.sql" />
+    <None Remove="Scripts\Release1.0.0\202102241000-CreateTaskable.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Release1.0.0\202102231001-AddColumnTaskTable - Copy.sql" />
+    <EmbeddedResource Include="Scripts\Release1.0.0\202102241000-CreateTaskable.sql" />
+    <EmbeddedResource Include="Scripts\Release1.0.0\202102231000-CreateBuyerTable.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="dbup-core" Version="4.5.0" />
+    <PackageReference Include="dbup-sqlserver" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\Release1.0.1\" />
+  </ItemGroup>
+</Project>
