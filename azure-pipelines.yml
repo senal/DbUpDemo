@@ -16,6 +16,7 @@ steps:
     projects: |
       DbUpdater/DbUpdater.csproj
       Dbup.Web/Dbup.Web.csproj
+    arguments: '-o $(Build.ArtifactStagingDirectory)/Output --configuration Release'
    
 - task: PublishBuildArtifacts@1
   inputs:
