@@ -8,10 +8,12 @@
     <None Remove="Scripts\Release1.0.0\202102231001-AddColumnTaskTable .sql" />
     <None Remove="Scripts\Release1.0.0\202102241000-CreateTaskTable.sql" />
     <None Remove="Scripts\Release1.0.0\202103011000-CreateJobTable.sql" />
+    <None Remove="Scripts\Release1.0.1\202103011001-CreateAddressTable.sql" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Scripts\Release1.0.0\202102231001-AddColumnTaskTable .sql" />
     <EmbeddedResource Include="Scripts\Release1.0.0\202102241000-CreateTaskTable.sql" />
+    <EmbeddedResource Include="Scripts\Release1.0.1\202103011001-CreateAddressTable.sql" />
     <EmbeddedResource Include="Scripts\Release1.0.1\202103011000-CreateJobTable.sql" />
     <EmbeddedResource Include="Scripts\Release1.0.0\202102231000-CreateBuyerTable.sql" />
   </ItemGroup>
